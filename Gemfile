@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'rails', '4.2.6'
+gem 'bower-rails', '0.10.0'
 gem 'slim-rails', '3.0.1'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
