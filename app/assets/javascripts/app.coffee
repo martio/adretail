@@ -4,7 +4,7 @@ app.config ['$httpProvider', ($httpProvider) ->
   $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 ]
 
-app.controller 'JobsController', ($scope, $http) ->
+app.controller 'JobsController', ['$scope', '$http', ($scope, $http) ->
   $scope.formData = {}
   $scope.resultData = {}
   
@@ -12,10 +12,11 @@ app.controller 'JobsController', ($scope, $http) ->
     response = $http.post '/sequences', $scope.formData
     response.success (data) ->
       $scope.resultData = {
-        sequence: data.sequence
+        sequence: data.content
       }
     response.error (data, status) ->
       if status is 422
         $scope.resultData = {
           error: data.error
         }
+]
