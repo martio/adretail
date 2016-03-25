@@ -1,0 +1,23 @@
+.container ng-app="adretail"
+  .header
+    h3.text-muted
+      | AdRetail Challenge
+  .jumbotron ng-controller="JobsController"
+    form ng-submit="processForm()"
+      .form-group
+        label for="sequence"
+          | Please enter sequence
+        textarea id="sequence" rows="5" autofocus=true ng-model="formData.sequence" class="form-control custom-control"
+      button type="submit" class="btn btn-default"
+        | Submit
+    h4
+      | Result
+    well ng-repeat="job in resultData.sequence"
+      span.label.label-default
+        | {{job}}
+      | &nbsp;
+    .alert.alert-danger role="alert" ng-if="resultData.error != null"
+      strong
+        | Warning:
+      | &nbsp;
+      | {{resultData.error}}

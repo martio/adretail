@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  resources :sequences
+  resources :sequences, only: :create
   root 'home#index'
 end

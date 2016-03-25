@@ -4,7 +4,9 @@ class ParseJobs
   def call
     context.jobs = []
 
-    return if context.content.empty?
+    if not context.content.present? or context.content.empty?
+      context.fail! error: 'content can\'t be empty'
+    end
 
     jobs = []
 
