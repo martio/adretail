@@ -1,7 +1,7 @@
 AdRetail Challenge
 ==================
 
-=== Intro
+## Intro
 
 The purpose of this exercise is to see how you approach a problem, and how you solve it. We’re interested to see how you structure your Ruby code, your command of the language and good design and testing principles, bear this in mind throughout.
 
@@ -21,7 +21,7 @@ The purpose of this exercise is to see how you approach a problem, and how you s
 
 Have fun :)
 
-== The Challenge
+# The Challenge
 
 Imagine we have a list of jobs, each represented by a character. Because certain jobs must be done before others, a job may have a dependency on another job. For example, a may depend on b, meaning the final sequence of jobs should place b before a. If a has no dependency, the position of a in the final sequence does not matter.
 
